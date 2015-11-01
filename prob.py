@@ -9,7 +9,10 @@ x = [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6, 6, 7, 7, 7, 7, 7, 
 
 #Frequency
 f = collections.Counter(x)
-print f
+instances = sum(f.values())
+print "There are %s total numbers in the data set." % (instances)
+for k,v in f.iteritems():
+    print "Frequency of number " + str(k) + " is " + str(float(v) / instances)
 
 
 #Boxplot
