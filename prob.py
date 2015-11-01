@@ -7,10 +7,15 @@ import scipy.stats as stats
 #Initial Data set
 x = [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 9, 9]
 
+#Frequency
+f = collections.Counter(x)
+print f
+
+
 #Boxplot
 #plt.boxplot(x)
 #plt.savefig("boxplot.png")
 
 #Histogram
-plt.hist(x, histtype='bar')
-plt.savefig('histogram.png')
+#plt.hist(x, histtype='bar')
+#plt.savefig('histogram.png')
