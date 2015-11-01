@@ -8,12 +8,13 @@ import scipy.stats as stats
 x = [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 9, 9]
 
 #Frequency
+"""
 f = collections.Counter(x)
 instances = sum(f.values())
 print "There are %s total numbers in the data set." % (instances)
 for k,v in f.iteritems():
     print "Frequency of number " + str(k) + " is " + str(float(v) / instances)
-
+"""
 
 #Boxplot
 #plt.boxplot(x)
@@ -22,3 +23,8 @@ for k,v in f.iteritems():
 #Histogram
 #plt.hist(x, histtype='bar')
 #plt.savefig('histogram.png')
+
+#QQ
+plt.figure()
+qq = stats.probplot(x, dist="norm", plot=plt)
+plt.show()
